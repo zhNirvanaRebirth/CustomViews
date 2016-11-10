@@ -1,3 +1,7 @@
 git branch test£¡
 
+<<<<<<< HEAD
 ÔõÃ´ÓÐÂÒÂë£¿
+=======
+OH, my gad!
+>>>>>>> zhwilson
