@@ -22,7 +22,7 @@ public class ClockView extends View implements Runnable{
     private float lineW;//线宽
     private Paint linePaint;
     private float currentDegree = 0;
-    private float sectionDegree = 22.5f;
+    private float sectionDegree = 15;
 
     public ClockView(Context context) {
         this(context, null);
@@ -68,10 +68,10 @@ public class ClockView extends View implements Runnable{
         super.onDraw(canvas);
         canvas.drawColor(Color.BLACK);
         canvas.translate(centerX, centerY);
-        for (float i = -22.5f; i < 382.5f; i += 3) {
+        for (int i = -15; i < 375; i += 3) {
             if (i >= currentDegree - sectionDegree && i <= currentDegree + sectionDegree) {
                 float degree = i - (currentDegree - sectionDegree);
-                lineLength = (float) (lineLengthdef * (1 + 1.1 * Math.sin(4*(degree/180)*PI)));
+                lineLength = (float) (lineLengthdef * (1 + 1.1 * Math.sin(6 * (degree / 180) * PI)));
             } else {
                 lineLength = lineLengthdef;
             }
